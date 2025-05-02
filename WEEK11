@@ -1,0 +1,113 @@
+APP.JS
+import logo from './logo.svg';
+import './App.css';
+
+function App() {
+  return (
+    <div className="App">
+      <header className="App-header">
+        <img src={logo} className="App-logo" alt="logo" />
+        <p>
+          Edit <code>src/App.js</code> and save to reload.
+        </p>
+        <a
+          className="App-link"
+          href="https://reactjs.org"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Learn React
+        </a>
+      </header>
+    </div>
+  );
+}
+export default App;
+
+INDEX.JS
+
+import ReactDOM from "react-dom/client";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+// Bootstrap CSS
+import "bootstrap/dist/css/bootstrap.min.css";
+// Bootstrap Bundle JS
+import "bootstrap/dist/js/bootstrap.bundle.min";
+
+import Layout from "./templates/Layout";
+import Home from "./templates/Home";
+import Profile from "./templates/Profile";
+import ContactUs from "./templates/ContactUs";
+
+export default function App() {
+  return (
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Layout />}>
+          <Route index element={<Home />} />
+          <Route path="profile" element={<Profile />} />
+          <Route path="contact" element={<ContactUs />} />
+        </Route>
+      </Routes>
+    </BrowserRouter>
+  );
+}
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(<App />);
+
+CONTACTUS.JS
+
+const ContactUs = () => {
+    return <h1>CMRIT, Kandlakoya village, Medchal, Hyderabad</h1>;
+  };
+    export default ContactUs;
+
+HOME.JS
+
+const Home = () => {
+    return <h1>Welcome to CMRIT Home Page</h1>;
+  };
+    export default Home;
+
+
+
+Profile.js
+
+const Profile = () => {
+    return <><h1>Welcome to Mrs. T.Jyotsna</h1><p>Assistant Professor, CSE Department, CMRIT</p></>
+  };
+    export default Profile;
+
+Layout.js
+import Container from 'react-bootstrap/Container';
+import Nav from 'react-bootstrap/Nav';
+import Navbar from 'react-bootstrap/Navbar';
+import { Outlet } from "react-router-dom";
+import logo from "../assets/logo.png"
+
+const Layout = () => {
+  return (
+    <>
+      <Navbar bg="primary" data-bs-theme="dark">
+        <Container>
+          <Navbar.Brand href="/">
+          <img
+              alt=""
+              src={logo}
+              width="30"
+              height="30"
+              className="d-inline-block align-top"
+            />{' '}
+
+            React SPA</Navbar.Brand>
+          <Nav className="me-auto">
+            <Nav.Link href="/">Home</Nav.Link>
+            <Nav.Link href="profile">Profile</Nav.Link>
+            <Nav.Link href="contact">Contact Us</Nav.Link>
+          </Nav>
+        </Container>
+      </Navbar>
+      <Outlet />
+      </>
+  );
+}
+export default Layout;
