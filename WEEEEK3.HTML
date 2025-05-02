@@ -1,0 +1,337 @@
+Registration.html
+
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        fieldset{
+            width:500px;
+            background-image:url(n1.jpg);
+            background-repeat:no-repeat;
+            background-size:cover;
+        }
+        table tr td{
+            padding-top:6px;
+            padding-bottom:6px;
+        }
+        body{
+            color:white;
+        }
+    </style>
+    <div id="header">
+        <h1><center>Registration</center></h1>
+    </div>
+    <div id="content">
+        <title>Register</title>
+    </div>
+</head>
+<script>
+    function validate() {
+        var fn = frm.fname.value;
+        for (x in fn) {
+            ch = fn.charCodeAt(x);
+            if (ch < 65 || ch > 90 && ch < 97 || ch > 122) {
+                alert("Invalid firstname");
+                return false;
+            }
+        }
+        var ln = frm.lname.value;
+        for (y in ln) {
+            ch = ln.charCodeAt(y);
+            if (ch < 65 || ch > 90 && ch < 97 || ch > 122) {
+                alert("Invalid lastname");
+                return false;
+            }
+        }
+        var phn = frm.phone.value;
+        var lenp = phn.length;
+        if (lenp !== 10) {
+            alert("Phone no should be exactly 10 digits");
+            return false;
+        }
+        var pwd1 = frm.pwd.value;
+        var pwdl = pwd1.length;
+        
+        if (pwdl < 6) {
+            alert("Password should be exceeded with 6 digits");
+            return false;
+        }
+        var reg = /^([a-zA-Z][a-zA-Z0-9\.-]+)@([a-zA-Z-]+).([a-z]{2,8})(.[a-z]{2,8})?$/;
+        var mail = frm.mailid.value;
+        if(reg.test(mail))
+        {
+            return true; 
+        }
+        else{
+            alert("Invalid mail");
+            return false;
+        }  
+        }   
+</script>
+<div id="container">
+    <body style="background-image:url(nature.jpg);
+      background-repeat:no-repeat;background-size:cover">
+    <center>
+           <form name="frm" action= "./success.html" onsubmit= "return validate()">
+                <fieldset align="center">
+                    <table align="center">
+                        <tr>
+                            <td>First Name: </td>
+                            <td><input type="text" name="fname" value="" size="50" required /></td>
+                        </tr>
+                        <tr>
+                            <td>Last Name: </td>
+                            <td> <input type="text" name="lname" value="" size="50" required /></td>
+                        </tr>
+                        <tr>
+                            <td>Phone No: </td>
+                            <td> <input type="text" name="phone" value="" size="50" required /></td>
+                        </tr>
+                        <tr>
+                            <td>Mail id:</td>
+                            <td><input type="email" name="mailid" value="" size="50" required /></td>
+                        </tr>
+                        <tr>
+                            <td>Gender:</td>
+                            <td>Male: <input type="radio" name="gender" value="male">
+                                Female: <input type="radio" name="gender" value="female"></td>
+                        </tr>
+                        <tr>
+                            <td>DOB:</td>
+                            <td><input type="date" name="dob" size="50" required /></td>
+                        </tr>
+
+                        <tr>
+                            <td>Username:</td>
+                            <td><input type="text" name="uname" value="" size="50" required /></td>
+                        </tr>
+                        <tr>
+                            <td>Password:</td>
+                            <td><input type="password" name="pwd" value="" size="50" required /></td>
+                        </tr>
+
+                        <tr>
+                            <td>Age:</td>
+                            <td><input type="text" name="age" value="" size="50" required /></td>
+                        </tr>
+                    </table>
+                    <input type="submit" value="SUBMIT" name="submit" />
+                </fieldset>
+            </form>
+</div>
+</center>
+</body>
+<div id="footer"><br><br>
+    Copyright © CMRIT_2025
+</div>
+</div>
+</html>
+
+
+SUCCES.HTML
+
+egistration.html
+
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        fieldset{
+            width:500px;
+            background-image:url(n1.jpg);
+            background-repeat:no-repeat;
+            background-size:cover;
+        }
+        table tr td{
+            padding-top:6px;
+            padding-bottom:6px;
+        }
+        body{
+            color:white;
+        }
+    </style>
+    <div id="header">
+        <h1><center>Registration</center></h1>
+    </div>
+    <div id="content">
+        <title>Register</title>
+    </div>
+</head>
+<script>
+    function validate() {
+        var fn = frm.fname.value;
+        for (x in fn) {
+            ch = fn.charCodeAt(x);
+            if (ch < 65 || ch > 90 && ch < 97 || ch > 122) {
+                alert("Invalid firstname");
+                return false;
+            }
+        }
+        var ln = frm.lname.value;
+        for (y in ln) {
+            ch = ln.charCodeAt(y);
+            if (ch < 65 || ch > 90 && ch < 97 || ch > 122) {
+                alert("Invalid lastname");
+                return false;
+            }
+        }
+        var phn = frm.phone.value;
+        var lenp = phn.length;
+        if (lenp !== 10) {
+            alert("Phone no should be exactly 10 digits");
+            return false;
+        }
+        var pwd1 = frm.pwd.value;
+        var pwdl = pwd1.length;
+        
+        if (pwdl < 6) {
+            alert("Password should be exceeded with 6 digits");
+            return false;
+        }
+        var reg = /^([a-zA-Z][a-zA-Z0-9\.-]+)@([a-zA-Z-]+).([a-z]{2,8})(.[a-z]{2,8})?$/;
+        var mail = frm.mailid.value;
+        if(reg.test(mail))
+        {
+            return true; 
+        }
+        else{
+            alert("Invalid mail");
+            return false;
+        }  
+        }   
+</script>
+<div id="container">
+    <body style="background-image:url(nature.jpg);
+      background-repeat:no-repeat;background-size:cover">
+    <center>
+           <form name="frm" action= "./success.html" onsubmit= "return validate()">
+                <fieldset align="center">
+                    <table align="center">
+                        <tr>
+                            <td>First Name: </td>
+                            <td><input type="text" name="fname" value="" size="50" required /></td>
+                        </tr>
+                        <tr>
+                            <td>Last Name: </td>
+                            <td> <input type="text" name="lname" value="" size="50" required /></td>
+                        </tr>
+                        <tr>
+                            <td>Phone No: </td>
+                            <td> <input type="text" name="phone" value="" size="50" required /></td>
+                        </tr>
+                        <tr>
+                            <td>Mail id:</td>
+                            <td><input type="email" name="mailid" value="" size="50" required /></td>
+                        </tr>
+                        <tr>
+                            <td>Gender:</td>
+                            <td>Male: <input type="radio" name="gender" value="male">
+                                Female: <input type="radio" name="gender" value="female"></td>
+                        </tr>
+                        <tr>
+                            <td>DOB:</td>
+                            <td><input type="date" name="dob" size="50" required /></td>
+                        </tr>
+
+                        <tr>
+                            <td>Username:</td>
+                            <td><input type="text" name="uname" value="" size="50" required /></td>
+                        </tr>
+                        <tr>
+                            <td>Password:</td>
+                            <td><input type="password" name="pwd" value="" size="50" required /></td>
+                        </tr>
+
+                        <tr>
+                            <td>Age:</td>
+                            <td><input type="text" name="age" value="" size="50" required /></td>
+                        </tr>
+                    </table>
+                    <input type="submit" value="SUBMIT" name="submit" />
+                </fieldset>
+            </form>
+</div>
+</center>
+</body>
+<div id="footer"><br><br>
+    Copyright © CMRIT_2025
+</div>
+</div>
+</html>
+LOGIN.HTML
+
+Login.html
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>login page</title>
+    <style>
+        fieldset{
+            width:500px;
+            background-image:url(nature.jpg);
+            background-repeat:no-repeat;
+            background-size:cover;
+        }
+        table tr td{
+            padding-top:6px;
+            padding-bottom:6px;
+        }
+        
+    </style>
+</head>
+<script>
+    function validate(){
+        let p1=document.frm.pwd.value;
+        let p2=p1.length;
+        if(p2>8)
+        {
+          alert("Password should not exceed 8 digits");
+          return false;
+        }
+        return true;
+    }
+</script>
+<body style="background-image:url(n1.jpg); background-repeat: no-repeat; 
+background-size:cover">
+    <center>
+        <h2>Login</h2>
+<form name="frm" method="post" action="./abc.html" onSubmit="return validate()">
+
+<fieldset>
+    <table>
+       <tr>
+         <td>User Name:</td>
+         <td><input type="text" name="uname" value="" required/> </td>
+      </tr>
+      <tr>
+         <td>Password:</td>
+        <td><input type="password" name="pwd" value="" required/> </td>
+     </tr>
+   </table>
+        <input type="submit" value="Login" name="submit"/>
+    <a href="./login.html"></a>
+    
+</fieldset>
+
+<p>Copyright CMRIT_2024</p>
+</form>
+    </center>
+</body>
+</html>
+
+ABCD.HTML
+
+abc.html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>success2 page</title>
+</head>
+<body>
+    <h2>Login Successfull</h2>
+</body>
+</html>
