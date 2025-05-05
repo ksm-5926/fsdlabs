@@ -1,0 +1,75 @@
+WEEK-1
+AIM: Show version control with respective login credentials in GIT and GITHUB using simple html code.
+GIT (Global Information Tracker)
+While working on GIT, we actively use two repositories.
+1.GIT: Local repository: The local repository is present on our work space or in our computer and consists of all the files in a folder. This repository is used to create a file or make changes locally, adding those files to staging area and commit themas offline to review history.
+2.Git hub: Remote repository refers to the server repository that you may access itanywhere. This repository is used by all the team members to exchangethe changes they made. Collaborate 
+Steps to follow to execute 1st week program by creating repositories
+Step1:Open any text editor like visual studio, create afolder as Week-1 (user defined)
+Step2: Create a HTML File sample page.html in Week-1 folder, write below code, and save it.
+Source Code:
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CMRIT</title>
+</head>
+<body>
+<h1> sample page</h1>
+// your own sample page here
+</body>
+</html>
+Step3:Go to Terminal -New terminal, and checkout whether you are in current directory or not. Your path is…   C:/users/student/desktop/Week-1>
+Step4: Git commands : Working to with local repositories.
+ 1)   C:/users/student/desktop/Week-1>git init
+            The commands git init command is used to create an empty git repository.
+2) You can check .git repository is created or not for that, go to C:/users/student/desktop/Week-1>
+.git folder is  available, if not, go to views ---show---hidden items---you can find now.
+Step5: git config :It is used to configure your global Git username and user email. It specifies the name and email that will be associated with your commits when you contribute to a Git repository.
+C:/users/student/desktop/Week-1>Git config – global user.name “ ”
+C:/users/student/desktop/Week-1> Git config – global user.email“  ”     (It should be valid user email)
+Step6:Git add: Add command is used to add any new or modified files by using git add. (or) git add file name.
+C:/users/student/desktop/Week-1>git add sample page.html
+Step7:git status:  The git status command tells the current state of the repository.
+C:/users/student/desktop/Week-1>git status
+The command helps in understanding the state of current branch by showing the commits that leads to this state.
+Step8: git log: The git log command shows the order of the commit history for a repository.
+C:/users/student/desktop/Week-1>git log
+Step9: git commit: The commit command and make sure the changes are saved git commit –m “First commit ”.
+C:/users/student/desktop/Week-1>git commit -m “First Commit”
+To create github account, Go to official web site, Github.com
+Step10: Git commands: working with remote Repositories
+Step i). First create Github account and login.
+Step ii). Next create new Repository.
+     Step iii). Enter Repository name as FSD.
+Step iv).Click button to “create repository”.
+Step11:git remote <URL address),available in left-bottom in github
+C:/users/student/desktop/Week-1>git remote add origin https://github.com/Divya/FSD.git
+The git remote command is used to create, view and delete connections to other repositories
+Step12: Git push:   The command git push is used to transfer the commits or pushing the file or content from the local repository to the remote repository.
+C:/users/student/desktop/Week-1>git push –u origin main/master
+Step13: Git clone: The git clone command is used to create a local working copy of an existing remote repository.
+C:/users/student/desktop/Week-1>Git clone https://github.com/Divya/FSD.git<remote URL>
+Step14: Git pull:   The Git pull command is used to any changes in the remote repository to the local repository.
+C:/users/student/desktop/Week-1>git pull origin master
+Step15: Git clone:   The Git clone command is used to copy entire existing remote repository  to our local repository folder.
+Create new folder in vscode, and make it as git repository by using git init command.
+And go to github, go to code and copy the URL after git clone,
+C:/users/student/desktop/Week-1> git clone https://github.com/Divya/FSD.git
+Step16: Git branch: to know the branch where we are working.
+C:/users/student/desktop/Week-1>git branch
+Step17: Git checkout: To create a new branch and switch on to new branch:
+ O/p: master
+        *dev (* means we are in dev branch) 
+C:/users/student/desktop/Week-1>git checkout -b dev.
+Right now we are in dev branch,
+Create one file wk-1.html in dev branch. 
+Add, commit in dev branch wk-1.html in dev branch itself.
+To bring that file into master branch, we can use merge keyword.
+Come to master branch 
+C:/users/student/desktop/Week-1>git checkout master
+O/p: dev
+        *master (* means we are in master branch) 
+C:/users/student/desktop/Week-1>git merge dev
+Now we can able to see our dev branch file in master branch also.
